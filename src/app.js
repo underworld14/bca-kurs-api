@@ -17,18 +17,14 @@ const app = express();
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(cookieParser());
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(cookieParser());
 
 // api routes
 app.use('/api', apiRoutes);
 
-// front end routing
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, '../public', 'index.html'));
-});
 // 404 unknown routes
 app.use((req, res, next) => {
   next(new HttpException(httpStatus.NOT_FOUND, 'Not found'));

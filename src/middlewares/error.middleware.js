@@ -19,7 +19,7 @@ const errorMiddleware = (error, req, res, next) => {
   }
 
   console.error(
-    `[${req.method}] ${req.path} >> StatusCode:: ${error.status}, Message:: ${error.message}`,
+    `[${req.method}] ${req.path} >> status:: ${error.status}, message:: ${error.message}`,
   );
 
   res.status(error.status);

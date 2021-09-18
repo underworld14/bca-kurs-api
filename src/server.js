@@ -7,7 +7,7 @@ dotenv.config();
 const PORT = process.env.PORT || 4000;
 
 const server = app.listen(PORT, () => {
-  console.log(`server berjalan pada port ${PORT}`);
+  console.log(`Server running on ${PORT}`);
 });
 
 // handling err unhandled rejection
