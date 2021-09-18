@@ -1,0 +1,20 @@
+FROM node:14.17.4-alpine
+
+ARG PORT
+ARG NODE_ENV
+ENV NODE_ENV ${NODE_ENV}
+
+WORKDIR /app
+
+# add telnet & bash...
+RUN apk update
+RUN apk add busybox-extras
+RUN apk add bash
+
+COPY ["package.json", "package-lock.json*", "./"]
+
+RUN npm install
+
+COPY . .
+
+EXPOSE ${PORT}
