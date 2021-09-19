@@ -21,8 +21,10 @@ module.exports = (sequelize, DataTypes) => {
       role: DataTypes.STRING,
     },
     {
-      sequelize,
       modelName: 'User',
+      tableName: 'users',
+      underscored: true,
+      sequelize,
     },
   );
   return User;
