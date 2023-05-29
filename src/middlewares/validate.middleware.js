@@ -19,7 +19,7 @@ const validate = (schema) => (req, res, next) => {
     .validate(object);
   if (error) {
     const errorMessage = error.details.map((details) => details.message).join(', ');
-    return next(new HttpException(httpStatus.BAD_REQUEST, errorMessage));
+    return next(new HttpException(httpStatus.UNPROCESSABLE_ENTITY, errorMessage));
   }
   req.value = value;
   return next();
