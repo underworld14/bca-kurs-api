@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "5cb62d02-bc3d-41c4-8f6a-731d712332b8",
+		"name": "Kurs API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15465058"
+	},
+	"item": [
+		{
+			"name": "Index BCA Kurs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/indexing",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"indexing"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Index BCA Kurs",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/indexing",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"indexing"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-psKd/10U2Bad1raSleFwJcqnWao\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 May 2023 08:53:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"count\": 16\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Kurs Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/kurs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"kurs"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "2023-05-29",
+							"description": "Start date for filtering",
+							"disabled": true
+						},
+						{
+							"key": "enddate",
+							"value": "2023-05-30",
+							"description": "End date for filtering",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Kurs Data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/kurs?startdate=2023-05-29&enddate=2023-05-30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"kurs"
+							],
+							"query": [
+								{
+									"key": "startdate",
+									"value": "2023-05-29",
+									"description": "Start date for filtering"
+								},
+								{
+									"key": "enddate",
+									"value": "2023-05-30",
+									"description": "End date for filtering"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a37-c0W/6j6gFxBei7CYe/nSIP62ipk\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 May 2023 08:56:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"USD\",\n            \"e_rate\": {\n                \"beli\": 14960,\n                \"jual\": 14990\n            },\n            \"tt_counter\": {\n                \"beli\": 14825,\n                \"jual\": 15125\n            },\n            \"bank_notes\": {\n                \"beli\": 14825,\n                \"jual\": 15125\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"SGD\",\n            \"e_rate\": {\n                \"beli\": 11059.94,\n                \"jual\": 11073.6\n            },\n            \"tt_counter\": {\n                \"beli\": 10951.75,\n                \"jual\": 11181.75\n            },\n            \"bank_notes\": {\n                \"beli\": 10953,\n                \"jual\": 11185\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"EUR\",\n            \"e_rate\": {\n                \"beli\": 16043.85,\n                \"jual\": 16062.56\n            },\n            \"tt_counter\": {\n                \"beli\": 15880.2,\n                \"jual\": 16247.2\n            },\n            \"bank_notes\": {\n                \"beli\": 15867,\n                \"jual\": 16239\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"AUD\",\n            \"e_rate\": {\n                \"beli\": 9775.91,\n                \"jual\": 9785.94\n            },\n            \"tt_counter\": {\n                \"beli\": 9654.1,\n                \"jual\": 9910.1\n            },\n            \"bank_notes\": {\n                \"beli\": 9660,\n                \"jual\": 9906\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"DKK\",\n            \"e_rate\": {\n                \"beli\": 2135.84,\n                \"jual\": 2174.19\n            },\n            \"tt_counter\": {\n                \"beli\": 2127.7,\n                \"jual\": 2192.2\n            },\n            \"bank_notes\": {\n                \"beli\": 2108,\n                \"jual\": 2182\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"SEK\",\n            \"e_rate\": {\n                \"beli\": 1363.57,\n                \"jual\": 1402.87\n            },\n            \"tt_counter\": {\n                \"beli\": 1362.85,\n                \"jual\": 1408.25\n            },\n            \"bank_notes\": {\n                \"beli\": 1345,\n                \"jual\": 1403\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"CAD\",\n            \"e_rate\": {\n                \"beli\": 11006.45,\n                \"jual\": 11016.42\n            },\n            \"tt_counter\": {\n                \"beli\": 10876.5,\n                \"jual\": 11139.5\n            },\n            \"bank_notes\": {\n                \"beli\": 10870,\n                \"jual\": 11140\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"CHF\",\n            \"e_rate\": {\n                \"beli\": 16540.44,\n                \"jual\": 16560.81\n            },\n            \"tt_counter\": {\n                \"beli\": 16367.7,\n                \"jual\": 16755.7\n            },\n            \"bank_notes\": {\n                \"beli\": 16339,\n                \"jual\": 16721\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"NZD\",\n            \"e_rate\": {\n                \"beli\": 9058.34,\n                \"jual\": 9073.39\n            },\n            \"tt_counter\": {\n                \"beli\": 8927.9,\n                \"jual\": 9198.9\n            },\n            \"bank_notes\": {\n                \"beli\": 8961,\n                \"jual\": 9193\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"GBP\",\n            \"e_rate\": {\n                \"beli\": 18469.98,\n                \"jual\": 18488.33\n            },\n            \"tt_counter\": {\n                \"beli\": 18265.1,\n                \"jual\": 18700.1\n            },\n            \"bank_notes\": {\n                \"beli\": 18279,\n                \"jual\": 18699\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"HKD\",\n            \"e_rate\": {\n                \"beli\": 1908.55,\n                \"jual\": 1916.22\n            },\n            \"tt_counter\": {\n                \"beli\": 1882.65,\n                \"jual\": 1942.15\n            },\n            \"bank_notes\": {\n                \"beli\": 1887,\n                \"jual\": 1935\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"JPY\",\n            \"e_rate\": {\n                \"beli\": 106.53,\n                \"jual\": 106.64\n            },\n            \"tt_counter\": {\n                \"beli\": 104.97,\n                \"jual\": 108.28\n            },\n            \"bank_notes\": {\n                \"beli\": 104.38,\n                \"jual\": 108.51\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"SAR\",\n            \"e_rate\": {\n                \"beli\": 3988.95,\n                \"jual\": 3996.65\n            },\n            \"tt_counter\": {\n                \"beli\": 3940.4,\n                \"jual\": 4046.4\n            },\n            \"bank_notes\": {\n                \"beli\": 3902,\n                \"jual\": 4057\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"CNY\",\n            \"e_rate\": {\n                \"beli\": 2107.22,\n                \"jual\": 2117.63\n            },\n            \"tt_counter\": {\n                \"beli\": 2031.45,\n                \"jual\": 2195.25\n            },\n            \"bank_notes\": {\n                \"beli\": 2059,\n                \"jual\": 2177\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"MYR\",\n            \"e_rate\": {\n                \"beli\": 3240.88,\n                \"jual\": 3257.28\n            },\n            \"tt_counter\": {\n                \"beli\": 3204.45,\n                \"jual\": 3291.45\n            },\n            \"bank_notes\": {\n                \"beli\": 0,\n                \"jual\": 0\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"THB\",\n            \"e_rate\": {\n                \"beli\": 430.53,\n                \"jual\": 431.09\n            },\n            \"tt_counter\": {\n                \"beli\": 426.3,\n                \"jual\": 435.3\n            },\n            \"bank_notes\": {\n                \"beli\": 400,\n                \"jual\": 459\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Kurs by currency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/kurs/EUR?startdate=2023-05-28&enddate=2023-05-30",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"kurs",
+						"EUR"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "2023-05-28"
+						},
+						{
+							"key": "enddate",
+							"value": "2023-05-30"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Kurs by currency",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/kurs/EUR?startdate=2023-05-28&enddate=2023-05-30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"kurs",
+								"EUR"
+							],
+							"query": [
+								{
+									"key": "startdate",
+									"value": "2023-05-28"
+								},
+								{
+									"key": "enddate",
+									"value": "2023-05-30"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "364"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16c-yumVcwO9Kwt3delkQweUCnwp6l8\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 May 2023 09:00:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"date\": \"2023-05-30\",\n            \"symbol\": \"EUR\",\n            \"e_rate\": {\n                \"beli\": 16010.48,\n                \"jual\": 16029.17\n            },\n            \"tt_counter\": {\n                \"beli\": 15847.45,\n                \"jual\": 16213.45\n            },\n            \"bank_notes\": {\n                \"beli\": 15834,\n                \"jual\": 16206\n            }\n        },\n        {\n            \"date\": \"2023-05-29\",\n            \"symbol\": \"EUR\",\n            \"e_rate\": {\n                \"beli\": 16043.85,\n                \"jual\": 16062.56\n            },\n            \"tt_counter\": {\n                \"beli\": 15880.2,\n                \"jual\": 16247.2\n            },\n            \"bank_notes\": {\n                \"beli\": 15867,\n                \"jual\": 16239\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Store Kurs Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"symbol\": \"EUR\",\n    \"date\": \"1999-06-12\",\n    \"e_rate\": {\n        \"beli\": 15000,\n        \"jual\": 16062.56\n    },\n    \"tt_counter\": {\n        \"beli\": 15880.2,\n        \"jual\": 16247.2\n    },\n    \"bank_notes\": {\n        \"beli\": 15867,\n        \"jual\": 16239\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/kurs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"kurs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Store Kurs Data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"symbol\": \"EUR\",\n    \"date\": \"1999-06-12\",\n    \"e_rate\": {\n        \"beli\": 15000,\n        \"jual\": 16062.56\n    },\n    \"tt_counter\": {\n        \"beli\": 15880.2,\n        \"jual\": 16247.2\n    },\n    \"bank_notes\": {\n        \"beli\": 15867,\n        \"jual\": 16239\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/kurs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"kurs"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-ibnGKsrmRJPcCZKjMXsAOxR4Eug\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 May 2023 08:04:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"date\": \"1999-06-12\",\n        \"symbol\": \"EUR\",\n        \"e_rate\": {\n            \"beli\": 15000,\n            \"jual\": 16062.56\n        },\n        \"tt_counter\": {\n            \"beli\": 15880.2,\n            \"jual\": 16247.2\n        },\n        \"bank_notes\": {\n            \"beli\": 15867,\n            \"jual\": 16239\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Kurs Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"symbol\": \"EUR\",\n    \"date\": \"1999-06-12\",\n    \"e_rate\": {\n        \"beli\": 15000,\n        \"jual\": 11000\n    },\n    \"tt_counter\": {\n        \"beli\": 15880.2,\n        \"jual\": 16247.2\n    },\n    \"bank_notes\": {\n        \"beli\": 15867,\n        \"jual\": 16239\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/kurs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"kurs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Kurs Not Found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"symbol\": \"EUR\",\n    \"date\": \"1999-06-12\",\n    \"e_rate\": {\n        \"beli\": 15000,\n        \"jual\": 11000\n    },\n    \"tt_counter\": {\n        \"beli\": 15880.2,\n        \"jual\": 16247.2\n    },\n    \"bank_notes\": {\n        \"beli\": 15867,\n        \"jual\": 16239\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/kurs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"kurs"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "743"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e7-SEjvonhq4t3crLOaPiquNPJCI/I\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 May 2023 09:03:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 404,\n    \"message\": \"data not found\",\n    \"stack\": \"Error: data not found\\n    at _callee4$ (/Users/sanctuary/Projects/backend_template/src/controllers/kurs.controller.js:115:11)\\n    at tryCatch (/Users/sanctuary/Projects/backend_template/node_modules/regenerator-runtime/runtime.js:64:40)\\n    at Generator.invoke (/Users/sanctuary/Projects/backend_template/node_modules/regenerator-runtime/runtime.js:299:22)\\n    at Generator.next (/Users/sanctuary/Projects/backend_template/node_modules/regenerator-runtime/runtime.js:124:21)\\n    at asyncGeneratorStep (/Users/sanctuary/Projects/backend_template/src/controllers/kurs.controller.js:32:103)\\n    at _next (/Users/sanctuary/Projects/backend_template/src/controllers/kurs.controller.js:34:194)\"\n}"
+				},
+				{
+					"name": "Update Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"symbol\": \"EUR\",\n    \"date\": \"1999-06-12\",\n    \"e_rate\": {\n        \"beli\": 15000,\n        \"jual\": 11000\n    },\n    \"tt_counter\": {\n        \"beli\": 15880.2,\n        \"jual\": 16247.2\n    },\n    \"bank_notes\": {\n        \"beli\": 15867,\n        \"jual\": 16239\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/kurs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"kurs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bc-Gn+yvGv0fpI3hlkybpWzJJOSfV8\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 May 2023 09:03:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"date\": \"1999-06-12\",\n        \"symbol\": \"EUR\",\n        \"e_rate\": {\n            \"beli\": 15000,\n            \"jual\": 11000\n        },\n        \"tt_counter\": {\n            \"beli\": 15880.2,\n            \"jual\": 16247.2\n        },\n        \"bank_notes\": {\n            \"beli\": 15867,\n            \"jual\": 16239\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete All Kurs By Date",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/kurs/2023-06-14",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"kurs",
+						"2023-06-14"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete All Kurs By Date",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/kurs/2023-06-14",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"kurs",
+								"2023-06-14"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 May 2023 08:49:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:7000",
+			"type": "string"
+		}
+	]
+}
