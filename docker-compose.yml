@@ -1,17 +1,17 @@
-version: '3.7'
+version: '3.8'
 
 services:
   mysql:
-    image: mysql:5.7
+    image: mysql:8
     environment:
       MYSQL_ROOT_USER: root
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: marriage_db
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: kurs_db
     ports:
       - '3306:3306'
     networks:
       - backend
-    volumes: 
+    volumes:
       - data:/var/lib/mysql
 
 networks:

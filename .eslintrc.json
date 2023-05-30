@@ -3,9 +3,9 @@
     "commonjs": true,
     "es2021": true,
     "node": true,
-    "jest": true
+    "mocha": true
   },
-  "plugins": ["jest"],
+  "plugins": ["mocha"],
   "extends": [
     "eslint:recommended",
     "plugin:json/recommended",
@@ -31,24 +31,5 @@
     "import/resolver": {
       "babel-module": {}
     }
-  },
-  "overrides": [
-    {
-      "files": ["jest.config.js", "test/*", "src/db/**", "src/models/**"],
-      "rules": {
-        "import/no-commonjs": 0,
-        "no-unused-vars": 0
-      }
-    },
-    {
-      "files": ["**/__tests__/**/*.js"],
-      "settings": {
-        "import/resolver": {
-          "jest": {
-            "jestConfigFile": "./jest.config.js"
-          }
-        }
-      }
-    }
-  ]
+  }
 }

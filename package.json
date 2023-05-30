@@ -7,7 +7,7 @@
     "start": "node dist/server.js",
     "build": "rm -rf dist && babel src --out-dir dist --copy-files",
     "dev": "nodemon --exec babel-node src/server.js",
-    "test:watch": "npm run test -- --watchAll"
+    "test": "mocha --require @babel/register src/**/**/**/*.test.js"
   },
   "prisma": {
     "schema": "src/prisma/schema.prisma"
@@ -44,6 +44,8 @@
     "@types/jest": "^26.0.24",
     "babel-jest": "^27.0.6",
     "babel-plugin-module-resolver": "^4.1.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.3.7",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
@@ -51,11 +53,16 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-json": "^3.0.0",
+    "eslint-plugin-mocha": "^10.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^4.3.8",
     "jest": "^27.0.6",
     "lint-staged": "^11.0.0",
+    "mocha": "^10.2.0",
+    "nock": "^13.3.1",
     "nodemon": "^2.0.7",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "regenerator-runtime": "^0.13.11",
+    "supertest": "^6.3.3"
   }
 }

@@ -4,7 +4,8 @@ import { DateTime } from 'luxon';
 import { scrapeBCAExchangeRate } from 'services/kurs.service';
 import KursTransformer from 'transformers/kurs.transformer';
 
-const Kurs = new PrismaClient().kurs;
+const prisma = new PrismaClient();
+const Kurs = prisma.kurs;
 
 /**
  * Handle index the exchange rate.
@@ -16,10 +17,12 @@ export const index = async (req, res) => {
   const exchangeRatesToday = await scrapeBCAExchangeRate();
 
   // it will not insert the data if the data is already exist
-  const data = await Kurs.createMany({
-    data: KursTransformer.parser(exchangeRatesToday),
-    skipDuplicates: true,
-  });
+  const [data] = await prisma.$transaction([
+    Kurs.createMany({
+      data: KursTransformer.parser(exchangeRatesToday),
+      skipDuplicates: true,
+    }),
+  ]);
 
   return res.status(200).json({
     message: 'success',
@@ -109,7 +112,7 @@ export const update = async (req, res) => {
   });
 
   if (!exchangeRate) {
-    throw new HttpException(404, 'Exchange rate not found');
+    throw new HttpException(404, 'data not found');
   }
 
   const updateExchange = await Kurs.update({
@@ -140,5 +143,5 @@ export const destroy = async (req, res) => {
     },
   });
 
-  return res.status(200).json({});
+  return res.status(204).json({});
 };

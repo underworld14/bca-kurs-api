@@ -22,7 +22,7 @@ export default class KursTransformer {
       return data.map(KursTransformer.formatter);
     }
     return {
-      date: DateTime.fromJSDate(data.date).toFormat('yyyy-MM-dd'),
+      date: DateTime.fromJSDate(data.date).toISODate(),
       symbol: data.symbol,
       e_rate: {
         beli: data.e_rate_buy,
